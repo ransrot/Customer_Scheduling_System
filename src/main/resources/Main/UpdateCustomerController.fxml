@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="568.0" prefWidth="319.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="Controllers.UpdateCustomerController">
+    <children>
+        <Label layoutX="77.0" layoutY="14.0" prefHeight="21.0" prefWidth="139.0" text="Update a Customer">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Label>
+        <HBox layoutX="14.0" layoutY="109.0" prefHeight="50.0" prefWidth="265.0" spacing="72.0">
+            <children>
+                <Label text="Name">
+                    <font>
+                        <Font size="13.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="nameTextField" />
+            </children>
+        </HBox>
+        <HBox layoutX="14.0" layoutY="167.0" prefHeight="50.0" prefWidth="265.0" spacing="20.0">
+            <children>
+                <Label text="Phone Number">
+                    <font>
+                        <Font size="13.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="phoneTextField" />
+            </children>
+        </HBox>
+        <HBox layoutX="14.0" layoutY="228.0" prefHeight="50.0" prefWidth="265.0" spacing="33.0">
+            <children>
+                <Label text="Postal Code">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="postalCodeTextField" />
+            </children>
+        </HBox>
+        <HBox layoutX="14.0" layoutY="284.0" prefHeight="50.0" prefWidth="265.0" spacing="61.0">
+            <children>
+                <Label text="Address">
+                    <font>
+                        <Font size="13.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="addressTextField" />
+            </children>
+        </HBox>
+        <HBox layoutX="14.0" layoutY="345.0" prefHeight="50.0" prefWidth="265.0" spacing="62.0">
+            <children>
+                <Label text="Country">
+                    <font>
+                        <Font size="13.0" />
+                    </font>
+                </Label>
+                <ComboBox fx:id="countryComboBox" onAction="#countryComboBoxSelected" prefWidth="150.0" />
+            </children>
+        </HBox>
+        <HBox layoutX="14.0" layoutY="395.0" prefHeight="50.0" prefWidth="265.0" spacing="77.0">
+            <children>
+                <Label text="State">
+                    <font>
+                        <Font size="13.0" />
+                    </font>
+                </Label>
+                <ComboBox fx:id="stateComboBox" prefWidth="150.0" />
+            </children>
+        </HBox>
+        <Button fx:id="saveButton" layoutX="108.0" layoutY="457.0" mnemonicParsing="false" onAction="#saveButtonPressedUpdate" prefHeight="31.0" prefWidth="52.0" text="Save" />
+        <Button fx:id="cancelButton" layoutX="177.0" layoutY="457.0" mnemonicParsing="false" onAction="#cancelButtonPressed" prefHeight="31.0" prefWidth="52.0" text="Cancel" />
+      <HBox layoutX="14.0" layoutY="48.0" prefHeight="50.0" prefWidth="265.0" spacing="92.0">
+         <children>
+            <Label prefHeight="19.0" prefWidth="14.0" text="ID">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="customerId" />
+         </children>
+      </HBox>
+    </children>
+</AnchorPane>

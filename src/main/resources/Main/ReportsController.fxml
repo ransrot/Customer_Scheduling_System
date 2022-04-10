@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="628.0" prefWidth="872.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="Controllers.ReportsController">
+   <children>
+      <Label layoutX="334.0" layoutY="14.0" text="Appointment Reports">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="100.0" text="Type">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TableView fx:id="typeTableView" layoutX="113.0" layoutY="54.0" prefHeight="113.0" prefWidth="534.0">
+        <columns>
+          <TableColumn fx:id="typeTypeCol" prefWidth="390.0" text="Type" />
+          <TableColumn fx:id="typeCountCol" prefWidth="143.0" text="Count" />
+        </columns>
+      </TableView>
+      <TableView fx:id="monthTableView" layoutX="113.0" layoutY="185.0" prefHeight="71.0" prefWidth="741.0">
+         <columns>
+            <TableColumn fx:id="janCol" prefWidth="55.0" text="January" />
+            <TableColumn fx:id="febCol" prefWidth="95.0" text="February" />
+            <TableColumn fx:id="marchCol" prefWidth="61.0" text="March" />
+            <TableColumn fx:id="aprilCol" prefWidth="55.0" text="April" />
+            <TableColumn fx:id="mayCol" prefWidth="60.0" text="May" />
+            <TableColumn fx:id="juneCol" prefWidth="59.0" text="June" />
+            <TableColumn fx:id="julyCol" prefWidth="50.0" text="July" />
+            <TableColumn fx:id="augCol" prefWidth="53.0" text="August" />
+            <TableColumn fx:id="sepCol" prefWidth="67.0" text="September" />
+            <TableColumn fx:id="octCol" prefWidth="56.0" text="October" />
+            <TableColumn fx:id="novCol" prefWidth="65.0" text="November" />
+            <TableColumn fx:id="decCol" prefWidth="64.0" text="December" />
+         </columns>
+      </TableView>
+      <Label layoutX="15.0" layoutY="213.0" text="Month Count">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="11.0" layoutY="279.0" text="Contact">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TableView fx:id="contactTableView" layoutX="113.0" layoutY="279.0" prefHeight="151.0" prefWidth="751.0">
+        <columns>
+          <TableColumn fx:id="contactAppointmentCol" prefWidth="96.0" text="Appointment ID" />
+          <TableColumn fx:id="contactTitleCol" prefWidth="101.0" text="Title" />
+            <TableColumn fx:id="contactTypeCol" prefWidth="115.0" text="Type" />
+            <TableColumn fx:id="contactDescriptionCol" prefWidth="97.0" text="Description" />
+            <TableColumn fx:id="contactStartCol" prefWidth="130.0" text="Start" />
+            <TableColumn fx:id="contactEndCol" prefWidth="130.0" text="End" />
+            <TableColumn fx:id="contactCustomerIdCol" text="Customer ID" />
+        </columns>
+      </TableView>
+      <ComboBox fx:id="contactComboBox" layoutX="-1.0" layoutY="314.0" onAction="#contactComboBoxSelected" prefHeight="25.0" prefWidth="108.0" />
+      <Label layoutX="11.0" layoutY="451.0" text="How Many Customers Currently">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="customersCountTextField" layoutX="251.0" layoutY="449.0" />
+      <Button layoutX="729.0" layoutY="557.0" mnemonicParsing="false" onAction="#exitButtonPressed" prefHeight="30.0" prefWidth="52.0" text="Exit" />
+   </children>
+</AnchorPane>
